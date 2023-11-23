@@ -7,8 +7,6 @@ plugins {
 kotlin {
     androidTarget()
 
-    jvm("desktop")
-
     listOf(
         iosX64(),
         iosArm64(),
@@ -32,9 +30,9 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.activity:activity-compose:1.7.2")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.1")
+                api(libs.androidx.activity.compose)
+                api(libs.androidx.appcompat.appcompat)
+                api(libs.androidx.core.ktx)
             }
         }
         val iosX64Main by getting
@@ -45,11 +43,6 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
-        }
-        val desktopMain by getting {
-            dependencies {
-                implementation(compose.desktop.common)
-            }
         }
     }
 }

@@ -1,8 +1,7 @@
-rootProject.name = "MyApplication"
+rootProject.name = "4pdaClient-mp"
 
 include(":androidApp")
 include(":shared")
-include(":desktopApp")
 
 pluginManagement {
     repositories {
@@ -37,5 +36,9 @@ dependencyResolutionManagement {
         mavenCentral()
         google()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+
+    versionCatalogs {
+        create("libs")
     }
 }
