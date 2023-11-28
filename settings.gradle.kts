@@ -1,7 +1,5 @@
 rootProject.name = "4pdaClient-mp"
 
-include(":androidApp")
-include(":shared")
 
 pluginManagement {
     repositories {
@@ -28,7 +26,7 @@ pluginManagement {
 }
 
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version("0.4.0")
+    id("org.gradle.toolchains.foojay-resolver-convention") version ("0.4.0")
 }
 
 dependencyResolutionManagement {
@@ -42,3 +40,9 @@ dependencyResolutionManagement {
         create("libs")
     }
 }
+
+
+include(
+    ":androidApp",
+    ":shared:app"
+)
