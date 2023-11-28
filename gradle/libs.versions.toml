@@ -1,7 +1,19 @@
 [versions]
+
+plugin-android = "7.4.2" # https://developer.android.com/studio/releases/gradle-plugin
+plugin-compose = "1.5.10" # https://github.com/JetBrains/compose-jb
+
+kotlin = "1.9.20" # https://github.com/JetBrains/kotlin
+
 core-ktx = "1.10.1"
 
 [libraries]
+
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-android = { module = "com.android.tools.build:gradle", version.ref = "plugin-android" }
+plugin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+plugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "plugin-compose" }
+
 androidx-activity-compose = "androidx.activity:activity-compose:1.8.1"
 androidx-appcompat-appcompat = "androidx.appcompat:appcompat:1.6.1"
 androidx-core-ktx = "androidx.core:core-ktx:1.12.0"

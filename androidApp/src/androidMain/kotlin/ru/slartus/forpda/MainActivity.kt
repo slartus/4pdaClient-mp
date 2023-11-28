@@ -1,4 +1,4 @@
-package com.myapplication
+package ru.slartus.forpda
 
 import MainView
 import android.os.Bundle

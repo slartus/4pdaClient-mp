@@ -44,5 +44,9 @@ dependencyResolutionManagement {
 
 include(
     ":androidApp",
-    ":shared:app"
+    ":shared:app",
+    ":shared:news-list:news-list-api",
+    ":shared:news-list:news-list-data",
+    ":shared:news-list:news-list-impl",
+    ":shared:news-list:news-list-compose"
 )
