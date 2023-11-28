@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.slartus.forpda.news_list.api"
+    namespace = "ru.slartus.forpda.news_list.impl"
 }
 
 kotlin {
@@ -12,7 +12,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-
+                implementation(project(":shared:news-list:news-list-api"))
+                implementation(libs.decompose)
             }
         }
     }

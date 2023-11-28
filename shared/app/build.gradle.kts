@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("kotlin-parcelize")
 }
 
 kotlin {
@@ -26,6 +27,14 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+
+                implementation(libs.decompose)
+                implementation(libs.decompose.extensions.experimental)
+
+                implementation(project(":shared:news-list:news-list-api"))
+                implementation(project(":shared:news-list:news-list-impl"))
+                implementation(project(":shared:news-list:news-list-compose"))
 
             }
         }
