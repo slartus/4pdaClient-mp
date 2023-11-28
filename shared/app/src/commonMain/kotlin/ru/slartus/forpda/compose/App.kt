@@ -1,6 +1,5 @@
-package ru.slartus.forpda
+package ru.slartus.forpda.compose
 
-import RootComponent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -19,6 +18,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.plus
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import kotlinx.coroutines.launch
+import ru.slartus.forpda.components.RootComponent
 import ru.slartus.forpda.news_list.compose.NewsList
 
 @Composable

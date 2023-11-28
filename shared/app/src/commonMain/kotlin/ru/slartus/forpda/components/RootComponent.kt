@@ -1,3 +1,5 @@
+package ru.slartus.forpda.components
+
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
@@ -16,7 +18,7 @@ interface RootComponent {
     }
 }
 
-class DefaultRootComponent(
+class RootComponentImpl(
     componentContext: ComponentContext,
 ) : RootComponent, ComponentContext by componentContext {
 
