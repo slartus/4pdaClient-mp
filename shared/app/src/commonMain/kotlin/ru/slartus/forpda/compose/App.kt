@@ -1,5 +1,6 @@
 package ru.slartus.forpda.compose
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -12,11 +13,13 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.plus
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
+import com.materialkolor.dynamicColorScheme
 import kotlinx.coroutines.launch
 import ru.slartus.forpda.components.RootComponent
 import ru.slartus.forpda.news_list.compose.NewsList
@@ -26,8 +29,7 @@ fun App(rootComponent: RootComponent) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
-
-    MaterialTheme {
+    AppTheme(seedColor = Color(0, 69, 90)) {
         ModalNavigationDrawer(
             drawerState = drawerState,
             drawerContent = {
@@ -45,7 +47,7 @@ fun App(rootComponent: RootComponent) {
                             }
                         }
                     }
-                ){
+                ) {
                     Text("click me")
                 }
                 Children(
@@ -60,4 +62,18 @@ fun App(rootComponent: RootComponent) {
             }
         }
     }
+}
+
+@Composable
+private fun AppTheme(
+    seedColor: Color,
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val colorScheme = dynamicColorScheme(seedColor, useDarkTheme)
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        content = content
+    )
 }

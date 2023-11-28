@@ -32,8 +32,8 @@ kotlin {
 
                 implementation(libs.decompose)
                 implementation(libs.decompose.extensions.experimental)
+                implementation(libs.materialKolor)
 
-                implementation(project(":shared:news-list:news-list-api"))
                 implementation(project(":shared:news-list:news-list-impl"))
                 implementation(project(":shared:news-list:news-list-compose"))
 
