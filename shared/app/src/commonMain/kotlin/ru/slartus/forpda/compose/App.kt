@@ -20,6 +20,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.plus
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.materialkolor.dynamicColorScheme
+import io.github.aakira.napier.Napier
 import kotlinx.coroutines.launch
 import ru.slartus.forpda.components.RootComponent
 import ru.slartus.forpda.news_list.compose.NewsList
@@ -42,6 +43,7 @@ fun App(rootComponent: RootComponent) {
                 Button(
                     onClick = {
                         scope.launch {
+                            Napier.d("clicked")
                             drawerState.apply {
                                 if (isClosed) open() else close()
                             }

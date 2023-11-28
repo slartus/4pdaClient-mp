@@ -34,6 +34,7 @@ kotlin {
                 implementation(libs.decompose.extensions.experimental)
                 implementation(libs.materialKolor)
 
+                implementation(project(":shared:common:common-utils"))
                 implementation(project(":shared:news-list:news-list-impl"))
                 implementation(project(":shared:news-list:news-list-compose"))
 

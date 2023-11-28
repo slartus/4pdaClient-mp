@@ -11,6 +11,7 @@ kotlin {
             dependencies {
                 implementation(project(":shared:app"))
                 implementation(libs.decompose)
+                implementation(libs.napier)
             }
         }
     }
@@ -23,7 +24,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "com.myapplication.MyApplication"
+        applicationId = "ru.slartus.forpda"
         minSdk = (findProperty("android.minSdk") as String).toInt()
         targetSdk = (findProperty("android.targetSdk") as String).toInt()
         versionCode = 1

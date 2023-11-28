@@ -43,6 +43,7 @@ dependencyResolutionManagement {
 
 
 include(
+    ":shared:common:common-utils",
     ":androidApp",
     ":shared:app",
     ":shared:news-list:news-list-api",

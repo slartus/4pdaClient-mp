@@ -6,9 +6,11 @@ plugin-compose = "1.5.10" # https://github.com/JetBrains/compose-jb
 kotlin = "1.9.20" # https://github.com/JetBrains/kotlin
 
 core-ktx = "1.10.1"
-decompose = "2.1.4"
-decompose-experimental = "2.1.4-compose-experimental"
-materialKolor = "1.2.8"
+
+decompose = "2.1.4" # https://github.com/arkivanov/Decompose
+decompose-experimental = "2.1.4-compose-experimental" # https://github.com/arkivanov/Decompose
+materialKolor = "1.2.8" # https://github.com/jordond/materialkolor
+napier = "2.6.1" # https://github.com/AAkira/Napier
 
 [libraries]
 
@@ -24,3 +26,4 @@ androidx-core-ktx = "androidx.core:core-ktx:1.12.0"
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-extensions-experimental = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose-experimental" }
 materialKolor = { module = "com.materialkolor:material-kolor", version.ref = "materialKolor" }
+napier = { module = "io.github.aakira:napier", version.ref = "napier" }
