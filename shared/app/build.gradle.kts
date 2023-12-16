@@ -3,6 +3,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.compose")
     id("kotlin-parcelize")
+    kotlin("native.cocoapods")
 }
 
 kotlin {
@@ -15,6 +16,16 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "Shared"
+            isStatic = true
+            export(libs.decompose)
+            export(libs.decompose.extensions.experimental)
+            export(libs.essently.lifecycle)
+        }
+    }
+
+    cocoapods {
+        version = "1.0.0"
+        framework {
             export(libs.decompose)
             export(libs.decompose.extensions.experimental)
             export(libs.essently.lifecycle)
