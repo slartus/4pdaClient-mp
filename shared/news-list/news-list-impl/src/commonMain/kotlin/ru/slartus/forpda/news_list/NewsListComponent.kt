@@ -18,5 +18,4 @@ class NewsListComponentImpl(
 ) : NewsListComponent, ComponentContext by componentContext {
     override val model: Value<NewsListComponent.Model> =
         MutableValue(NewsListComponent.Model(items = List(100) { NewsItem("Item $it") }))
-
 }

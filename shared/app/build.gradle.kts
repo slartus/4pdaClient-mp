@@ -14,8 +14,10 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "shared"
-            isStatic = true
+            baseName = "Shared"
+            export(libs.decompose)
+            export(libs.decompose.extensions.experimental)
+            export(libs.essently.lifecycle)
         }
     }
 
@@ -61,7 +63,7 @@ kotlin {
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    namespace = "ru.slartus.forpda"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
