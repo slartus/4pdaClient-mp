@@ -26,7 +26,7 @@ import ru.slartus.forpda.components.RootComponent
 import ru.slartus.forpda.news_list.compose.NewsList
 
 @Composable
-fun App(rootComponent: RootComponent) {
+fun RootView(rootComponent: RootComponent) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 

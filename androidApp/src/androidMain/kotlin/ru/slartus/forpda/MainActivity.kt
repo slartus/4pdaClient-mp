@@ -5,7 +5,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import com.arkivanov.decompose.defaultComponentContext
 import ru.slartus.forpda.components.RootComponentImpl
-import ru.slartus.forpda.compose.App
+import ru.slartus.forpda.compose.RootView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
             componentContext = defaultComponentContext(),
         )
         setContent {
-            App(root)
+            RootView(root)
         }
     }
 }

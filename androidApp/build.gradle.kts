@@ -12,6 +12,9 @@ kotlin {
                 implementation(project(":shared:app"))
                 implementation(libs.decompose)
                 implementation(libs.napier)
+                implementation(libs.androidx.activity.compose)
+                implementation(libs.androidx.appcompat.appcompat)
+                implementation(libs.androidx.core.ktx)
             }
         }
     }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import shared
+import ForpdaShared
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
